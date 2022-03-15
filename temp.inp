@@ -1,0 +1,170 @@
+; Filename: Real_Synthetic_Artificial_leak_N6.inp
+; WNTR: 0.4.1
+; Created: 2022-03-12 13:22:30
+[TITLE]
+
+[JUNCTIONS]
+;ID                      Elevation       Demand Pattern                 
+ N1                                25               1                            ;
+ N5                                10              13                            ;
+ N10                                5             1.2                            ;
+ N7                                 5   -1969.1827762                            ;
+ N2                                 9            12.6                            ;
+ N6                                 7            10.1                            ;
+ N3                                 6             1.1                            ;
+ N8                                 6    347.02129739                            ;
+ N13                                0             1.7                            ;
+ N9                                 7             3.9                            ;
+ N14                                6             1.5                            ;
+ N4                                 4             1.2                            ;
+ N11                                6             1.5                            ;
+ N12                                6             1.2                            ;
+ N15                                5            0.89                            ;
+ N16                                5             1.1                            ;
+
+[RESERVOIRS]
+;ID                                   Head                  Pattern
+ Reservior                         35                            ;
+
+[TANKS]
+;ID                              Elevation           Init Level            Min Level            Max Level             Diameter           Min Volume Volume Curve         Overflow            
+
+[PIPES]
+;ID                   Node1                Node2                              Length             Diameter            Roughness           Minor Loss               Status
+ P1                   Reservior            N1                              1200             500             100               0                 Open   ;
+ P2                   N1                   N5                              1000             400             100               0                 Open   ;
+ P8                   N5                   N10                             1000             250             100               0                 Open   ;
+ P3                   N1                   N2                              1000             400             100               0                 Open   ;
+ P6                   N5                   N6                              1000             300             100               0                 Open   ;
+ P5                   N2                   N6                              1000             300             100               0                 Open   ;
+ P4                   N2                   N3                              1000             250             100               0                 Open   ;
+ P9                   N3                   N7                              1000             250            0.25               0                 Open   ;
+ P7                   N6                   N7                              1000             250             100               0                 Open   ;
+ P12                  N13                  N8                              1200             250              25               0                 Open   ;
+ P13                  N7                   N8                              1000             250             100               0                 Open   ;
+ P14                  N3                   N9                              1000             200             100               0                 Open   ;
+ P15                  N9                   N8                              1000             250             100               0                 Open   ;
+ P16                  N3                   N4                              1000             150             100               0                 Open   ;
+ P17                  N9                   N14                             1000             125             100               0                 Open   ;
+ P11                  N10                  N11                             1000             150             100               0                 Open   ;
+ P18                  N12                  N13                             1000             250             100               0                 Open   ;
+ P19                  N15                  N10                             1000             250             100               0                 Open   ;
+ P10                  N7                   N16                              500             250             100               0                 Open   ;
+
+[PUMPS]
+;ID                   Node1                Node2                Properties          
+
+[VALVES]
+;ID                   Node1                Node2                            Diameter Type              Setting           Minor Loss
+ V1                   N16                  N15                               12 PRV                0               0   ;
+
+[TAGS]
+;type      name       tag       
+
+[DEMANDS]
+;ID        Demand     Pattern   
+
+[STATUS]
+;ID        Setting   
+
+[PATTERNS]
+;ID        Multipliers
+
+[CURVES]
+;ID         X-Value      Y-Value     
+
+[CONTROLS]
+
+[RULES]
+
+[ENERGY]
+GLOBAL EFFICIENCY      75.0000
+GLOBAL PRICE           0.0000
+DEMAND CHARGE          0.0000
+
+[EMITTERS]
+;ID        Flow coefficient
+N6         0.5       
+
+[QUALITY]
+
+[SOURCES]
+;Node      Type       Quality    Pattern   
+
+[REACTIONS]
+;Type           Pipe/Tank               Coefficient
+
+ ORDER BULK 1
+ ORDER TANK 1
+ ORDER WALL 1
+ GLOBAL BULK 0.0000    
+ GLOBAL WALL 0.0000    
+ LIMITING POTENTIAL 0.0000    
+ ROUGHNESS CORRELATION 0.0000    
+
+[MIXING]
+;Tank ID             Model Fraction
+
+[TIMES]
+DURATION             00:00:00
+HYDRAULIC TIMESTEP   01:00:00
+QUALITY TIMESTEP     00:05:00
+PATTERN TIMESTEP     01:00:00
+PATTERN START        00:00:00
+REPORT TIMESTEP      01:00:00
+REPORT START         00:00:00
+START CLOCKTIME      00:00:00 AM
+RULE TIMESTEP        00:06:00
+STATISTIC            NONE      
+
+[REPORT]
+SUMMARY    NO
+PAGE       0
+
+[OPTIONS]
+UNITS                LPS                 
+HEADLOSS             H-W                 
+SPECIFIC GRAVITY     1
+VISCOSITY            1
+TRIALS               40
+ACCURACY             0.001
+CHECKFREQ            2
+MAXCHECK             10
+UNBALANCED           CONTINUE 10
+DEMAND MULTIPLIER    1
+EMITTER EXPONENT     0.5
+QUALITY              NONE                
+DIFFUSIVITY          1
+TOLERANCE            0.01
+
+[COORDINATES]
+;Node      X-Coord    Y-Coord   
+N1                461.540000000       7025.640000000
+N5                512.820000000       5230.770000000
+N10              2170.940000000       3470.090000000
+N7               7282.050000000       5316.240000000
+N2               3897.440000000       7025.640000000
+N6               3880.340000000       5264.960000000
+N3               9162.390000000       6991.450000000
+N8               9401.710000000       5196.580000000
+N13              8598.290000000       2632.480000000
+N9              11846.150000000       6051.280000000
+N14             10478.630000000       3042.740000000
+N4              12102.560000000       7059.830000000
+N11             -1042.740000000       2683.760000000
+N12             10683.760000000       1931.620000000
+N15              4393.160000000       3487.180000000
+N16              6991.450000000       3504.270000000
+Reservior       -2290.600000000       8803.420000000
+
+[VERTICES]
+;Link      X-Coord    Y-Coord   
+
+[LABELS]
+
+[BACKDROP]
+DIMENSIONS    0.00    0.00    10000.00    10000.00
+UNITS    NONE
+OFFSET    0.00    0.00
+
+[END]

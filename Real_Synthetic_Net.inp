@@ -1,0 +1,175 @@
+[TITLE]
+
+
+[JUNCTIONS]
+;ID              	Elev        	Demand      	Pattern         
+ N1              	25          	1           	                	;
+ N5              	10          	13          	                	;
+ N10             	5           	1.2         	                	;
+ N7              	5           	1.21        	                	;
+ N2              	9           	12.6        	                	;
+ N6              	7           	10.1        	                	;
+ N3              	6           	1.1         	                	;
+ N8              	6           	23          	                	;
+ N13             	0           	1.7         	                	;
+ N9              	7           	3.9         	                	;
+ N14             	6           	1.5         	                	;
+ N4              	4           	1.2         	                	;
+ N11             	6           	1.5         	                	;
+ N12             	6           	1.2         	                	;
+ N15             	5           	0.89        	                	;
+ N16             	5           	1.1         	                	;
+
+[RESERVOIRS]
+;ID              	Head        	Pattern         
+ Reservior       	35          	                	;
+
+[TANKS]
+;ID              	Elevation   	InitLevel   	MinLevel    	MaxLevel    	Diameter    	MinVol      	VolCurve
+
+[PIPES]
+;ID              	Node1           	Node2           	Length      	Diameter    	Roughness   	MinorLoss   	Status
+ P1              	Reservior       	N1              	1200        	500         	100         	0           	Open  	;
+ P2              	N1              	N5              	1000        	400         	100         	0           	Open  	;
+ P8              	N5              	N10             	1000        	250         	100         	0           	Open  	;
+ P3              	N1              	N2              	1000        	400         	100         	0           	Open  	;
+ P6              	N5              	N6              	1000        	300         	100         	0           	Open  	;
+ P5              	N2              	N6              	1000        	300         	100         	0           	Open  	;
+ P4              	N2              	N3              	1000        	250         	100         	0           	Open  	;
+ P9              	N3              	N7              	1000        	250         	0.25        	0           	Open  	;
+ P7              	N6              	N7              	1000        	250         	100         	0           	Open  	;
+ P12             	N13             	N8              	1200        	250         	25          	0           	Open  	;
+ P13             	N7              	N8              	1000        	250         	100         	0           	Open  	;
+ P14             	N3              	N9              	1000        	200         	100         	0           	Open  	;
+ P15             	N9              	N8              	1000        	250         	100         	0           	Open  	;
+ P16             	N3              	N4              	1000        	150         	100         	0           	Open  	;
+ P17             	N9              	N14             	1000        	125         	100         	0           	Open  	;
+ P11             	N10             	N11             	1000        	150         	100         	0           	Open  	;
+ P18             	N12             	N13             	1000        	250         	100         	0           	Open  	;
+ P19             	N15             	N10             	1000        	250         	100         	0           	Open  	;
+ P10             	N7              	N16             	500         	250         	100         	0           	Open  	;
+
+[PUMPS]
+;ID              	Node1           	Node2           	Parameters
+
+[VALVES]
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+ V1              	N16             	N15             	12          	PRV 	0           	0           	;
+
+[TAGS]
+
+[DEMANDS]
+;Junction        	Demand      	Pattern         	Category
+
+[STATUS]
+;ID              	Status/Setting
+
+[PATTERNS]
+;ID              	Multipliers
+
+[CURVES]
+;ID              	X-Value     	Y-Value
+
+[CONTROLS]
+
+[RULES]
+
+[ENERGY]
+ Global Efficiency  	75
+ Global Price       	0
+ Demand Charge      	0
+
+[EMITTERS]
+;Junction        	Coefficient
+ N10             	0
+ N8              	0
+
+[QUALITY]
+;Node            	InitQual
+
+[SOURCES]
+;Node            	Type        	Quality     	Pattern
+
+[REACTIONS]
+;Type     	Pipe/Tank       	Coefficient
+
+
+[REACTIONS]
+ Order Bulk            	1
+ Order Tank            	1
+ Order Wall            	1
+ Global Bulk           	0
+ Global Wall           	0
+ Limiting Potential    	0
+ Roughness Correlation 	0
+
+[MIXING]
+;Tank            	Model
+
+[TIMES]
+ Duration           	0
+ Hydraulic Timestep 	1:00
+ Quality Timestep   	0:05
+ Pattern Timestep   	1:00
+ Pattern Start      	0:00
+ Report Timestep    	1:00
+ Report Start       	0:00
+ Start ClockTime    	12 am
+ Statistic          	None
+
+[REPORT]
+ Status             	No
+ Summary            	No
+ Page               	0
+
+[OPTIONS]
+ Units              	LPS
+ Headloss           	H-W
+ Specific Gravity   	1
+ Viscosity          	1
+ Trials             	40
+ Accuracy           	0.001
+ CHECKFREQ          	2
+ MAXCHECK           	10
+ DAMPLIMIT          	0
+ Unbalanced         	Continue 10
+ Pattern            	1
+ Demand Multiplier  	1.0
+ Emitter Exponent   	0.5
+ Quality            	None mg/L
+ Diffusivity        	1
+ Tolerance          	0.01
+
+[COORDINATES]
+;Node            	X-Coord         	Y-Coord
+ N1              	461.54          	7025.64         
+ N5              	512.82          	5230.77         
+ N10             	2170.94         	3470.09         
+ N7              	7282.05         	5316.24         
+ N2              	3897.44         	7025.64         
+ N6              	3880.34         	5264.96         
+ N3              	9162.39         	6991.45         
+ N8              	9401.71         	5196.58         
+ N13             	8598.29         	2632.48         
+ N9              	11846.15        	6051.28         
+ N14             	10478.63        	3042.74         
+ N4              	12102.56        	7059.83         
+ N11             	-1042.74        	2683.76         
+ N12             	10683.76        	1931.62         
+ N15             	4393.16         	3487.18         
+ N16             	6991.45         	3504.27         
+ Reservior       	-2290.60        	8803.42         
+
+[VERTICES]
+;Link            	X-Coord         	Y-Coord
+
+[LABELS]
+;X-Coord           Y-Coord          Label & Anchor Node
+
+[BACKDROP]
+ DIMENSIONS     	0.00            	0.00            	10000.00        	10000.00        
+ UNITS          	None
+ FILE           	
+ OFFSET         	0.00            	0.00            
+
+[END]

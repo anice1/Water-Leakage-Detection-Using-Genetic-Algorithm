@@ -1,0 +1,557 @@
+[TITLE]
+NAMETOWN - Present Demand
+Gravity supply, without zoning
+
+[JUNCTIONS]
+;ID              	Elev        	Demand      	Pattern         
+ a01             	82.48       	0           	Domestic        	;       	Old town
+ a02             	68.48       	1.457       	Domestic        	;       	Old town
+ a03             	65.77       	1.289       	Domestic        	;       	Old town
+ a04             	48.9        	1.611       	Domestic        	;       	Old town
+ a05             	48.81       	1.101       	Domestic        	;       	Old town
+ a06             	42.95       	0.537       	Domestic        	;       	Old town
+ a07             	42.07       	1.182       	Domestic        	;       	Old town
+ a08             	41.51       	0.618       	Domestic        	;       	Old town
+ a09             	41.21       	0.913       	Domestic        	;       	Old town
+ a10             	43.83       	0.349       	Domestic        	;       	Old town
+ a11             	59.47       	0.510       	Domestic        	;       	Old town
+ a12             	56.74       	0.698       	Domestic        	;       	Old town
+ a13             	57.12       	0.483       	Domestic        	;       	Old town
+ a14             	38.33       	1.638       	Domestic        	;       	Old town
+ a15             	40.85       	2.041       	Domestic        	;       	Old town
+ a16             	35.17       	1.182       	Domestic        	;       	Old town
+ a17             	30.42       	0.832       	Domestic        	;       	Old town
+ a18             	40.4        	0.994       	Domestic        	;       	Old town
+ a19             	28.34       	1.719       	Domestic        	;       	Old town
+ a20             	29.91       	0.510       	Domestic        	;       	Old town
+ a21             	45.6        	0.886       	Domestic        	;       	Old town
+ b01             	24.82       	1.849       	Domestic        	;       	New town
+ b02             	27.1        	1.048       	Domestic        	;       	New town
+ b03             	28.16       	2.311       	Domestic        	;       	New town
+ b04             	32.41       	1.449       	Domestic        	;       	New town
+ b05             	37.71       	0.925       	Domestic        	;       	New town
+ b06             	41.81       	1.757       	Domestic        	;       	New town
+ b07             	41.78       	1.294       	Domestic        	;       	New town
+ b08             	46.8        	1.140       	Domestic        	;       	New town
+ b09             	24.71       	0.185       	Domestic        	;       	New town
+ b10             	23.74       	0.185       	Domestic        	;       	New town
+ b11             	33.35       	1.603       	Domestic        	;       	New town
+ b12             	42.72       	2.743       	Domestic        	;       	New town
+ c01             	19.06       	0.798       	Hostels         	;       	Hostels
+ c02             	21.47       	0.199       	Hostels         	;       	Hostels
+ c03             	20.35       	0.199       	Hostels         	;       	Hostels
+ c04             	24.38       	0.313       	Hostels         	;       	Hostels
+ c05             	12.5        	0.484       	Hostels         	;       	Hostels
+ c06             	13.04       	1.140       	Hostels         	;       	Hostels
+ c07             	21.88       	0.598       	Hostels         	;       	Hostels
+ d01             	36.06       	0.326       	Campus          	;       	Campus
+ d02             	26.27       	0.296       	Campus          	;       	Campus
+ d03             	28.55       	0.533       	Campus          	;       	Campus
+ d04             	54.35       	1.037       	Campus          	;       	Campus
+ d05             	30.01       	0.622       	Campus          	;       	Campus
+ d06             	35.63       	0.622       	Campus          	;       	Campus
+ d07             	64.33       	0.444       	Campus          	;       	Campus
+ d08             	40.2        	1.422       	Campus          	;       	Campus
+ e01             	17.91       	1.049       	Domestic        	;       	Suburb
+ e02             	17.77       	1.341       	Domestic        	;       	Suburb
+ e03             	22.99       	1.114       	Domestic        	;       	Suburb
+ e04             	30.1        	1.334       	Domestic        	;       	Suburb
+ e05             	38.88       	1.138       	Domestic        	;       	Suburb
+ e06             	16.13       	0.843       	Domestic        	;       	Suburb
+ e07             	22.96       	1.257       	Domestic        	;       	Suburb
+ e08             	35.39       	0.821       	Domestic        	;       	Suburb
+ f01             	9.66        	9.365       	Domestic        	;       	Village
+ Source1         	110         	-49.48      	Source1         	;
+ PRVds           	28.34       	0           	                	;
+ 1               	65          	0           	                	;
+ 3               	70          	-39.84      	Source1         	;
+
+[RESERVOIRS]
+;ID              	Head        	Pattern         
+
+[TANKS]
+;ID              	Elevation   	InitLevel   	MinLevel    	MaxLevel    	Diameter    	MinVol      	VolCurve
+ TankS1          	105         	3.6         	2.2         	5.2         	23          	0           	                	;
+ TankS2          	60          	3.5         	3.0         	5.2         	17.7        	0           	                	;
+
+[PIPES]
+;ID              	Node1           	Node2           	Length      	Diameter    	Roughness   	MinorLoss   	Status
+ p01             	TankS1          	a01             	220         	400         	0.25        	0           	Open  	;Source
+ p02             	a01             	a02             	657         	400         	0.25        	0           	Open  	;
+ p03             	a02             	a03             	380         	100         	0.25        	0           	Open  	;
+ p04             	a02             	a04             	371         	400         	0.25        	0           	Open  	;
+ p05             	a03             	a05             	325         	100         	0.25        	0           	Open  	;
+ p06             	a04             	a06             	180         	400         	0.25        	0           	Open  	;
+ p07             	a06             	a05             	249         	100         	0.25        	0           	Open  	;
+ p08             	a06             	a07             	125         	400         	0.25        	0           	Open  	;
+ p09             	a07             	a08             	256         	200         	0.25        	0           	Open  	;
+ p10             	a08             	a09             	200         	150         	0.25        	0           	Open  	;
+ p11             	a08             	a10             	111         	100         	0.25        	0           	Open  	;
+ p12             	a09             	a11             	106         	100         	0.25        	0           	Open  	;
+ p13             	a10             	a11             	215         	100         	0.25        	0           	Open  	;
+ p14             	a10             	a12             	369         	80          	0.25        	0           	Open  	;
+ p15             	a11             	a13             	386         	80          	0.25        	0           	Open  	;
+ p16             	a12             	a13             	168         	50          	0.25        	0           	Open  	;
+ p17             	a07             	a14             	390         	400         	0.25        	0           	Open  	;
+ p18             	a15             	a09             	420         	150         	0.25        	0           	Open  	;
+ p19             	a14             	a15             	459         	150         	0.25        	0           	Open  	;
+ p20             	a14             	a16             	153         	300         	1           	0           	Open  	;
+ p21             	a16             	a17             	168         	150         	0.25        	0           	Open  	;
+ p22             	a17             	a18             	291         	100         	0.25        	0           	Open  	;
+ p23             	a16             	a19             	295         	300         	0.25        	0           	Open  	;
+ p24             	a17             	a20             	255         	80          	0.5         	0           	Open  	;
+ p25             	a18             	a21             	206         	80          	0.25        	0           	Open  	;
+ p26             	a19             	a20             	202         	100         	1           	0           	Open  	;
+ p27             	a20             	a21             	289         	100         	0.25        	0           	Open  	;
+ p28             	PRVds           	b01             	372         	300         	1           	0           	Open  	;
+ p29             	b01             	b02             	376         	250         	0.25        	0           	Open  	;
+ p30             	b02             	b03             	248         	250         	0.25        	0           	Open  	;
+ p31             	b03             	b04             	278         	150         	0.25        	0           	Open  	;
+ p32             	b04             	b05             	270         	80          	0.25        	0           	Open  	;
+ p33             	b06             	b07             	106         	200         	0.25        	0           	Open  	;
+ p34             	b07             	b08             	290         	200         	0.25        	0           	Open  	;
+ p35             	b10             	b11             	439         	150         	0.25        	0           	Open  	;
+ p36             	b11             	b12             	269         	100         	0.25        	0           	Open  	;
+ p37             	b08             	b05             	333         	150         	0.25        	0           	Open  	;
+ p38             	b05             	b12             	380         	100         	0.25        	0           	Open  	;
+ p39             	b03             	b06             	380         	200         	0.25        	0           	Open  	;
+ p40             	b03             	b09             	289         	150         	0.25        	0           	Open  	;
+ p41             	b09             	b10             	112         	150         	0.25        	0           	Open  	;
+ p42             	b01             	c01             	727         	300         	0.25        	0           	Open  	;
+ p43             	c01             	c02             	184         	200         	0.25        	0           	Open  	;
+ p44             	c02             	d01             	201         	150         	0.25        	0           	Open  	;
+ p45             	d01             	d02             	214         	50          	0.25        	0           	Open  	;
+ p46             	d01             	d03             	195         	150         	0.25        	0           	Open  	;
+ p47             	d03             	d05             	136         	100         	0.25        	0           	Open  	;
+ p48             	d03             	d04             	461         	100         	0.25        	0           	Open  	;
+ p49             	d04             	d07             	148         	50          	0.25        	0           	Open  	;
+ p50             	d05             	d06             	85          	100         	0.25        	0           	Open  	;
+ p51             	d06             	d07             	368         	80          	0.25        	0           	Open  	;
+ p52             	d06             	d08             	256         	80          	0.25        	0           	Open  	;
+ p53             	c02             	c03             	177         	150         	0.25        	0           	Open  	;
+ p54             	c03             	c04             	177         	100         	0.25        	0           	Open  	;
+ p55             	c04             	c07             	159         	100         	0.25        	0           	Open  	;
+ p56             	c07             	c06             	349         	150         	0.25        	0           	Open  	;
+ p57             	c05             	c06             	108         	150         	0.25        	0           	Open  	;
+ p58             	c01             	e01             	168         	250         	0.25        	0           	Open  	;
+ p59             	e01             	e02             	361         	200         	0.25        	0           	Open  	;
+ p60             	e02             	e03             	289         	150         	0.25        	0           	Open  	;
+ p61             	e03             	e04             	277         	100         	0.25        	0           	Open  	;
+ p62             	e04             	e05             	266         	80          	0.25        	0           	Open  	;
+ p63             	e02             	e06             	354         	80          	0.25        	0           	Open  	;
+ p64             	e03             	e07             	325         	80          	0.25        	0           	Open  	;
+ p65             	e04             	e08             	272         	80          	0.25        	0           	Open  	;
+ p66             	e06             	e07             	280         	50          	0.25        	0           	Open  	;
+ p67             	e07             	e08             	282         	50          	0.25        	0           	Open  	;
+ p68             	e01             	c05             	366         	200         	0.25        	0           	Open  	;
+ p69             	c05             	f01             	452         	150         	0.25        	0           	Open  	;
+ 1               	Source1         	TankS1          	400         	400         	0.25        	0           	Open  	;
+ pS2             	1               	b08             	200         	200         	0.25        	0           	Open  	;
+ 3               	3               	TankS2          	200         	400         	0.25        	0           	Open  	;
+
+[PUMPS]
+;ID              	Node1           	Node2           	Parameters
+ 2               	TankS2          	1               	HEAD 4	;
+ 4               	TankS2          	1               	HEAD 4	;
+
+[VALVES]
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+ PRV             	a19             	PRVds           	300         	PRV 	60          	0           	;
+
+[TAGS]
+ LINK 	p01             	CI-60
+ LINK 	p02             	CI-60
+ LINK 	p03             	PE-15
+ LINK 	p04             	CI-60
+ LINK 	p05             	PE-15
+ LINK 	p06             	CI-60
+ LINK 	p07             	PE-15
+ LINK 	p08             	CI-60
+ LINK 	p09             	GS-50
+ LINK 	p10             	GS-50
+ LINK 	p11             	PE-15
+ LINK 	p12             	PE-15
+ LINK 	p13             	PE-15
+ LINK 	p14             	PE-15
+ LINK 	p15             	PE-15
+ LINK 	p16             	PE-15
+ LINK 	p17             	CI-60
+ LINK 	p18             	GS-50
+ LINK 	p19             	GS-50
+ LINK 	p20             	DI-25
+ LINK 	p21             	PE-25
+ LINK 	p22             	PE-15
+ LINK 	p23             	DI-25
+ LINK 	p24             	PE-15
+ LINK 	p25             	PE-15
+ LINK 	p26             	PE-25
+ LINK 	p27             	PE-15
+ LINK 	p28             	DI-25
+ LINK 	p29             	GS-25
+ LINK 	p30             	GS-25
+ LINK 	p31             	PE-15
+ LINK 	p32             	PE-15
+ LINK 	p33             	PE-15
+ LINK 	p34             	PE-15
+ LINK 	p35             	PE-15
+ LINK 	p36             	PE-15
+ LINK 	p37             	PE-15
+ LINK 	p38             	PE-15
+ LINK 	p39             	PE-25
+ LINK 	p40             	PE-25
+ LINK 	p41             	PE-25
+ LINK 	p42             	DI-15
+ LINK 	p43             	PE-15
+ LINK 	p44             	PE-15
+ LINK 	p45             	PE-15
+ LINK 	p46             	PE-15
+ LINK 	p47             	PE-15
+ LINK 	p48             	PE-15
+ LINK 	p49             	PE-15
+ LINK 	p50             	PE-15
+ LINK 	p51             	PE-15
+ LINK 	p52             	PE-15
+ LINK 	p53             	PE-15
+ LINK 	p54             	PE-15
+ LINK 	p55             	PE-15
+ LINK 	p56             	PE-15
+ LINK 	p57             	PE-15
+ LINK 	p58             	DI-15
+ LINK 	p59             	PE-15
+ LINK 	p60             	PE-15
+ LINK 	p61             	PE-15
+ LINK 	p62             	PE-15
+ LINK 	p63             	PE-15
+ LINK 	p64             	PE-15
+ LINK 	p65             	PE-15
+ LINK 	p66             	PE-15
+ LINK 	p67             	PE-15
+ LINK 	p68             	DI-15
+ LINK 	p69             	PE-15
+
+[DEMANDS]
+;Junction        	Demand      	Pattern         	Category
+ a01             	0           	Domestic        	; 
+ a01             	0           	Leakage         	; 
+ a02             	1.457       	Domestic        	; 
+ a02             	0.298       	Leakage         	; 
+ a03             	1.289       	Domestic        	; 
+ a03             	0.264       	Leakage         	; 
+ a04             	1.611       	Domestic        	; 
+ a04             	0.330       	Leakage         	; 
+ a05             	1.101       	Domestic        	; 
+ a05             	0.226       	Leakage         	; 
+ a06             	0.537       	Domestic        	; 
+ a06             	0.110       	Leakage         	; 
+ a07             	1.182       	Domestic        	; 
+ a07             	0.242       	Leakage         	; 
+ a08             	0.618       	Domestic        	; 
+ a08             	0.127       	Leakage         	; 
+ a09             	0.913       	Domestic        	; 
+ a09             	0.187       	Leakage         	; 
+ a10             	0.349       	Domestic        	; 
+ a10             	0.072       	Leakage         	; 
+ a11             	0.510       	Domestic        	; 
+ a11             	0.105       	Leakage         	; 
+ a12             	0.698       	Domestic        	; 
+ a12             	0.143       	Leakage         	; 
+ a13             	0.483       	Domestic        	; 
+ a13             	0.099       	Leakage         	; 
+ a14             	1.638       	Domestic        	; 
+ a14             	0.336       	Leakage         	; 
+ a15             	2.041       	Domestic        	; 
+ a15             	0.418       	Leakage         	; 
+ a16             	1.182       	Domestic        	; 
+ a16             	0.242       	Leakage         	; 
+ a17             	0.832       	Domestic        	; 
+ a17             	0.171       	Leakage         	; 
+ a18             	0.994       	Domestic        	; 
+ a18             	0.204       	Leakage         	; 
+ a19             	1.719       	Domestic        	; 
+ a19             	0.352       	Leakage         	; 
+ a20             	0.510       	Domestic        	; 
+ a20             	0.105       	Leakage         	; 
+ a21             	0.886       	Domestic        	; 
+ a21             	0.182       	Leakage         	; 
+ b01             	1.849       	Domestic        	; 
+ b01             	0.379       	Leakage         	; 
+ b02             	1.048       	Domestic        	; 
+ b02             	0.215       	Leakage         	; 
+ b03             	2.311       	Domestic        	; 
+ b03             	0.473       	Leakage         	; 
+ b04             	1.449       	Domestic        	; 
+ b04             	0.297       	Leakage         	; 
+ b05             	0.925       	Domestic        	; 
+ b05             	0.189       	Leakage         	; 
+ b06             	1.757       	Domestic        	; 
+ b06             	0.360       	Leakage         	; 
+ b07             	1.294       	Domestic        	; 
+ b07             	0.265       	Leakage         	; 
+ b08             	1.140       	Domestic        	; 
+ b08             	0.234       	Leakage         	; 
+ b09             	0.185       	Domestic        	; 
+ b09             	0.038       	Leakage         	; 
+ b10             	0.185       	Domestic        	; 
+ b10             	0.038       	Leakage         	; 
+ b11             	1.603       	Domestic        	; 
+ b11             	0.328       	Leakage         	; 
+ b12             	2.743       	Domestic        	; 
+ b12             	0.562       	Leakage         	; 
+ b12             	0.47        	Hotel           	; 
+ c01             	0.798       	Hostels         	; 
+ c01             	0.163       	Leakage         	; 
+ c02             	0.199       	Hostels         	; 
+ c02             	0.041       	Leakage         	; 
+ c03             	0.199       	Hostels         	; 
+ c03             	0.041       	Leakage         	; 
+ c04             	0.313       	Hostels         	; 
+ c04             	0.064       	Leakage         	; 
+ c05             	0.484       	Hostels         	; 
+ c05             	0.099       	Leakage         	; 
+ c06             	1.140       	Hostels         	; 
+ c06             	0.233       	Leakage         	; 
+ c07             	0.598       	Hostels         	; 
+ c07             	0.123       	Leakage         	; 
+ d01             	0.326       	Campus          	; 
+ d01             	0.067       	Leakage         	; 
+ d02             	0.296       	Campus          	; 
+ d02             	0.061       	Leakage         	; 
+ d03             	0.533       	Campus          	; 
+ d03             	0.109       	Leakage         	; 
+ d04             	1.037       	Campus          	; 
+ d04             	0.212       	Leakage         	; 
+ d05             	0.622       	Campus          	; 
+ d05             	0.127       	Leakage         	; 
+ d06             	0.622       	Campus          	; 
+ d06             	0.127       	Leakage         	; 
+ d07             	0.444       	Campus          	; 
+ d07             	0.091       	Leakage         	; 
+ d08             	1.422       	Campus          	; 
+ d08             	0.291       	Leakage         	; 
+ e01             	1.049       	Domestic        	; 
+ e01             	0.215       	Leakage         	; 
+ e02             	1.341       	Domestic        	; 
+ e02             	0.275       	Leakage         	; 
+ e03             	1.114       	Domestic        	; 
+ e03             	0.228       	Leakage         	; 
+ e04             	1.334       	Domestic        	; 
+ e04             	0.273       	Leakage         	; 
+ e05             	1.138       	Domestic        	; 
+ e05             	0.233       	Leakage         	; 
+ e06             	0.843       	Domestic        	; 
+ e06             	0.173       	Leakage         	; 
+ e07             	1.257       	Domestic        	; 
+ e07             	0.257       	Leakage         	; 
+ e08             	0.821       	Domestic        	; 
+ e08             	0.168       	Leakage         	; 
+ f01             	9.365       	Domestic        	; 
+ f01             	1.918       	Leakage         	; 
+
+[STATUS]
+;ID              	Status/Setting
+
+[PATTERNS]
+;ID              	Multipliers
+;
+ Domestic        	0.28        	0.32        	0.41        	0.50        	0.83        	1.54        
+ Domestic        	1.98        	1.75        	1.22        	1.08        	0.96        	0.85        
+ Domestic        	0.95        	1.21        	1.35        	1.65        	1.88        	1.75        
+ Domestic        	1.20        	0.86        	0.53        	0.33        	0.28        	0.29        
+;
+ Campus          	0.30        	0.25        	0.27        	0.30        	0.53        	0.70        
+ Campus          	1.20        	1.45        	1.48        	1.35        	1.30        	1.32        
+ Campus          	1.65        	1.53        	1.37        	1.32        	1.25        	1.20        
+ Campus          	1.15        	1.04        	1.01        	0.85        	0.66        	0.43        
+;
+ Hostels         	1.10        	0.80        	0.56        	0.40        	0.64        	1.00        
+ Hostels         	1.60        	1.50        	1.23        	0.70        	0.65        	0.45        
+ Hostels         	1.01        	0.95        	0.65        	0.45        	0.88        	1.65        
+ Hostels         	1.44        	1.38        	1.28        	1.25        	1.20        	1.15        
+;
+ Leakage         	1.05        	1.03        	1.03        	1.02        	1.00        	0.99        
+ Leakage         	0.98        	0.95        	0.96        	0.99        	1.00        	1.01        
+ Leakage         	1.01        	1.00        	1.01        	0.99        	0.99        	0.96        
+ Leakage         	0.96        	0.97        	1.00        	1.01        	1.03        	1.04        
+;
+ Hotel           	0.30        	0.28        	0.33        	0.45        	0.69        	0.99        
+ Hotel           	1.70        	1.65        	1.45        	1.23        	1.12        	0.89        
+ Hotel           	1.34        	1.28        	1.00        	0.88        	0.65        	1.20        
+ Hotel           	1.43        	1.33        	1.26        	1.08        	0.87        	0.70        
+;
+ Source1         	1           
+
+[CURVES]
+;ID              	X-Value     	Y-Value
+;PUMP: 
+ 2               	45          	45          
+;PUMP: 
+ 1               	60          	45          
+;PUMP: 
+ 3               	40          	40          
+;PUMP: 
+ 4               	9           	51          
+ 4               	15          	50.5        
+ 4               	22          	49.5        
+ 4               	29          	47.5        
+ 4               	35.5        	44.5        
+ 4               	43          	40          
+
+[CONTROLS]
+
+
+[RULES]
+
+
+[ENERGY]
+ Global Efficiency  	75
+ Global Price       	0
+ Demand Charge      	0
+
+[EMITTERS]
+;Junction        	Coefficient
+
+[QUALITY]
+;Node            	InitQual
+
+[SOURCES]
+;Node            	Type        	Quality     	Pattern
+
+[REACTIONS]
+;Type     	Pipe/Tank       	Coefficient
+
+
+[REACTIONS]
+ Order Bulk            	1
+ Order Tank            	1
+ Order Wall            	1
+ Global Bulk           	0
+ Global Wall           	0
+ Limiting Potential    	0
+ Roughness Correlation 	0
+
+[MIXING]
+;Tank            	Model
+
+[TIMES]
+ Duration           	24:00 
+ Hydraulic Timestep 	1:00 
+ Quality Timestep   	0:05 
+ Pattern Timestep   	1:00 
+ Pattern Start      	0:00 
+ Report Timestep    	1:00 
+ Report Start       	0:00 
+ Start ClockTime    	12 am
+ Statistic          	NONE
+
+[REPORT]
+ Status             	No
+ Summary            	No
+ Page               	0
+
+[OPTIONS]
+ Units              	LPS
+ Headloss           	D-W
+ Specific Gravity   	1
+ Viscosity          	1
+ Trials             	40
+ Accuracy           	0.001
+ CHECKFREQ          	2
+ MAXCHECK           	10
+ DAMPLIMIT          	0
+ Unbalanced         	Continue 10
+ Pattern            	Domestic
+ Demand Multiplier  	1.7
+ Emitter Exponent   	0.5
+ Quality            	Trace TankS1
+ Diffusivity        	1
+ Tolerance          	0.01
+
+[COORDINATES]
+;Node            	X-Coord         	Y-Coord
+ a01             	492967.85       	1996541.03      
+ a02             	493265.64       	1996402.46      
+ a03             	493418.96       	1996514.50      
+ a04             	493421.91       	1996302.21      
+ a05             	493533.95       	1996399.51      
+ a06             	493508.71       	1996277.69      
+ a07             	493495.62       	1996216.70      
+ a08             	493619.46       	1996184.27      
+ a09             	493713.81       	1996151.84      
+ a10             	493643.05       	1996234.39      
+ a11             	493743.29       	1996196.07      
+ a12             	493684.32       	1996414.25      
+ a13             	493763.93       	1996387.71      
+ a14             	493427.81       	1996033.90      
+ a15             	493643.05       	1995954.29      
+ a16             	493398.32       	1995963.14      
+ a17             	493477.93       	1995936.60      
+ a18             	493613.56       	1995883.53      
+ a19             	493348.20       	1995824.56      
+ a20             	493448.45       	1995812.77      
+ a21             	493589.97       	1995783.28      
+ b01             	493336.41       	1995638.81      
+ b02             	493175.18       	1995735.12      
+ b03             	493068.10       	1995798.02      
+ b04             	492950.16       	1995871.73      
+ b05             	492835.17       	1995942.50      
+ b06             	493088.74       	1995986.72      
+ b07             	493044.51       	1996016.21      
+ b08             	492917.73       	1996086.97      
+ b09             	493065.15       	1995653.55      
+ b10             	493047.46       	1995600.48      
+ b11             	492858.76       	1995712.52      
+ b12             	492740.82       	1995777.38      
+ c01             	493315.89       	1995307.21      
+ c02             	493401.27       	1995264.35      
+ c03             	493398.32       	1995175.90      
+ c04             	493486.78       	1995170.00      
+ c05             	493283.33       	1995010.79      
+ c06             	493343.78       	1994996.52      
+ c07             	493486.78       	1995090.39      
+ d01             	493501.52       	1995261.40      
+ d02             	493607.66       	1995246.66      
+ d03             	493507.42       	1995358.70      
+ d04             	493740.51       	1995370.57      
+ d05             	493501.52       	1995426.52      
+ d06             	493525.11       	1995461.90      
+ d07             	493707.91       	1995441.26      
+ d08             	493507.42       	1995588.68      
+ e01             	493292.78       	1995200.55      
+ e02             	493121.17       	1995202.44      
+ e03             	492976.69       	1995208.33      
+ e04             	492838.12       	1995208.33      
+ e05             	492705.44       	1995220.13      
+ e06             	493121.17       	1995025.53      
+ e07             	492982.59       	1995046.17      
+ e08             	492844.01       	1995072.70      
+ f01             	493253.85       	1994786.70      
+ Source1         	492692.03       	1996382.22      
+ PRVds           	493342.94       	1995757.91      
+ 1               	492680.69       	1996203.69      
+ 3               	492014.76       	1995891.98      
+ TankS1          	492802.54       	1996546.57      
+ TankS2          	492130.95       	1996217.86      
+
+[VERTICES]
+;Link            	X-Coord         	Y-Coord
+ 4               	492351.98       	1996062.00      
+ 4               	492663.69       	1996104.51      
+
+[LABELS]
+;X-Coord           Y-Coord          Label & Anchor Node
+ 492645.86        1996536.38       "Source 1"                 
+ 493796.29        1996111.01       "A: Old town"                 
+ 492626.85        1996079.01       "B: New town"                 
+ 492569.99        1995121.22       "E: Suburbs"                 
+ 493616.57        1995559.03       "D: Campus"                 
+ 493590.90        1995173.93       "C: Hostels"                 
+ 493092.41        1994771.72       "F: Village"                 
+ 492645.86        1995800.76       "b12"                 
+
+[BACKDROP]
+ DIMENSIONS     	492652.52       	1994698.98      	493816.85       	1996628.75      
+ UNITS          	None
+ FILE           	
+ OFFSET         	0.00            	0.00            
+
+[END]
